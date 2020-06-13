@@ -1,5 +1,5 @@
 // Data required for the function to render the DOM:
-const externalLink = "https://github.com/sagarbajpai/webpackfromscratch";
+const externalLink = "https://github.com/pushkar100/webpack4course";
 
 /**
  * A function that creates & returns the footer dom element
@@ -24,10 +24,12 @@ const createFooter = () => {
   return Footer;
 };
 
+export default createFooter;
+
 /*
 HTML template for understanding output of the above JS snippet: 
 <div class="footer">
-    <a href="https://github.com/sagarbajpai/webpackfromscratch">Source code</a>
+    <a href="https://github.com/pushkar100/webpack4course">Source code</a>
     <div>Made with love during quarantine</div>
 </div>
 */

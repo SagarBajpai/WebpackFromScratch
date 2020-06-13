@@ -1,3 +1,6 @@
+import _ from "lodash";
+import { joinByPipe, convertTo12hrClock } from "../helpers/index";
+
 // Data required for the function to render the DOM:
 const postsData = [
   ["Planning to finish the book by the year 2030", "22:00"],
@@ -40,6 +43,8 @@ const createPosts = () => {
 
   return Posts;
 };
+
+export default createPosts;
 
 /*
 HTML template for understanding output of the above JS snippet: 

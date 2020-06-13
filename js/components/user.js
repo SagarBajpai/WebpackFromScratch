@@ -1,7 +1,7 @@
 // Data required for the function to render the DOM:
 const userInfo = {
-  Name: "Sagar Bajpai",
-  Age: 22,
+  Name: "Arun kumar",
+  Age: 31,
   Bio: "I like making friends. Please be my friend!",
 };
 // Refactor later: Put this data into a CSV file
@@ -44,15 +44,17 @@ const createUser = () => {
   return User;
 };
 
+export default createUser;
+
 /*
 HTML template for understanding output of the above JS snippet: 
 <div class="user">
-    <div class="avatar"></div>
-    <div class="user-data">
-        <div class="user-info-item">Name: Arun kumar</div>
-        <div class="user-info-item">Age: 31</div>
-        <div class="user-info-item">Bio: I like making friends. Please be my friend!</div>
-        <div class="user-info-item">Hobbies: Cricket, Football, Hockey, Drawing</div>
-    </div>
+  <div class="avatar"></div>
+  <div class="user-data">
+      <div class="user-info-item">Name: Arun kumar</div>
+      <div class="user-info-item">Age: 31</div>
+      <div class="user-info-item">Bio: I like making friends. Please be my friend!</div>
+      <div class="user-info-item">Hobbies: Cricket, Football, Hockey, Drawing</div>
+  </div>
 </div>
 */
