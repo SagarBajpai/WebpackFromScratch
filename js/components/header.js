@@ -19,8 +19,6 @@ const createHeader = () => {
   return Header;
 };
 
-export default createHeader;
-
 /*
 HTML template for understanding output of the above JS snippet: 
 <div class="header">

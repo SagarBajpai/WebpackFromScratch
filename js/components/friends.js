@@ -1,6 +1,3 @@
-import _ from "lodash";
-import { wrapWithParentheses } from "../helpers/index";
-
 /**
  * A function that creates & returns the friends' dom element
  */
@@ -36,8 +33,6 @@ const createFriends = () => {
 
   return Friends;
 };
-
-export default createFriends;
 
 /*
 HTML template for understanding output of the above JS snippet: 
