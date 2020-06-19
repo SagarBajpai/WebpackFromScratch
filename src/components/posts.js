@@ -1,3 +1,4 @@
+import "../../styles/post.css";
 import { join } from "lodash-es";
 import { joinByPipe, convertTo12hrClock } from "../helpers/index";
 

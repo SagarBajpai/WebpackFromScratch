@@ -1,5 +1,6 @@
 import { snakeCase } from "lodash-es";
 import { wrapWithParentheses } from "../helpers/index";
+import "../../styles/friends.css";
 
 /**
  * A function that creates & returns the friends' dom element
