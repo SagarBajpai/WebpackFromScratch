@@ -1,7 +1,7 @@
 import "../../styles/header.css";
 
 // Data required for the function to render the DOM:
-import socialLogo from "../../images/social-logo.png";
+import socialLogo from "../images/social-logo.png";
 
 /**
  * A function that creates & returns the header dom element
