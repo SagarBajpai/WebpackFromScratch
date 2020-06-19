@@ -1,9 +1,11 @@
+import userInfo from "../data/userInfo.json";
+
 // Data required for the function to render the DOM:
-const userInfo = {
-  Name: "Arun kumar",
-  Age: 31,
-  Bio: "I like making friends. Please be my friend!",
-};
+// const userInfo = {
+//   Name: "Arun kumar",
+//   Age: 31,
+//   Bio: "I like making friends. Please be my friend!",
+// };
 // Refactor later: Put this data into a CSV file
 const hobbiesCommaSeparated = "Cricket, Football, Hockey, Drawing";
 
