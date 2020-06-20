@@ -1,4 +1,4 @@
-import "../../styles/user.css";
+import "../styles/user.css";
 import userInfo from "../data/userInfo.json";
 
 // Data required for the function to render the DOM:

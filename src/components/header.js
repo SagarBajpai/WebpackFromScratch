@@ -1,4 +1,4 @@
-import "../../styles/header.css";
+import "../styles/header.css";
 
 // Data required for the function to render the DOM:
 import socialLogo from "../images/social-logo.png";
