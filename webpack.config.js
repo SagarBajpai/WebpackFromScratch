@@ -1,5 +1,6 @@
 const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = () => ({
   mode: "production",
   entry: "./src/index.js",
@@ -54,5 +55,6 @@ module.exports = () => ({
         course: "Webpack From Scratch from sagar",
       },
     }),
+    new CleanWebpackPlugin(),
   ],
 });
