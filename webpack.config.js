@@ -1,5 +1,4 @@
 const path = require("path");
-
 module.exports = () => ({
   mode: "production",
   entry: "./src/index.js",
@@ -16,10 +15,12 @@ module.exports = () => ({
       {
         test: /\.(png|jpg|jpeg|svg|gif)$/,
         use: {
-          loader: "file-loader",
+          loader: "url-loader",
           options: {
+            limit: 10000,
             name: "[name].[ext]",
             outputPath: "images",
+            publicPath: "dist/images", //https://webpack.js.org/loaders/file-loader/#publicpath
           },
         },
       },
