@@ -1,4 +1,5 @@
 const path = require("path");
+const htmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = () => ({
   mode: "production",
   entry: "./src/index.js",
@@ -20,7 +21,6 @@ module.exports = () => ({
             limit: 10000,
             name: "[name].[ext]",
             outputPath: "images",
-            publicPath: "dist/images", //https://webpack.js.org/loaders/file-loader/#publicpath
           },
         },
       },
@@ -47,4 +47,12 @@ module.exports = () => ({
       },
     ],
   },
+  plugins: [
+    new htmlWebpackPlugin({
+      title: "Social Media Website",
+      meta: {
+        course: "Webpack From Scratch from sagar",
+      },
+    }),
+  ],
 });
