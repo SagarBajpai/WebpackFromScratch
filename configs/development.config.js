@@ -9,5 +9,6 @@ module.exports = () => ({
     //https://webpack.js.org/configuration/dev-server/
     contentBase: "../dist",
     port: 3001,
+    hot: true,
   },
 });
