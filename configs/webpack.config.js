@@ -2,13 +2,12 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
-const webpackMerge = require("webpack-merge");
-
-const modeConfig = (mode) => require(`./${mode}.config.js`);
+const { merge } = require("webpack-merge");
 
 module.exports = (webpackEnv) => {
   const mode = webpackEnv ? webpackEnv.mode : "production";
-  return webpackMerge(
+  const modeConfig = require(`./${mode}.config.js`);
+  return merge(
     {
       mode,
       entry: "./src/index.js",

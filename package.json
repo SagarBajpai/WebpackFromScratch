@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack",
+    "webpack": "webpack --config configs/webpack.config.js",
     "webpack:dev": "npm run webpack -- --env.mode development",
     "webpack:prod": "npm run webpack -- --env.mode production"
   },
@@ -36,7 +36,8 @@
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^5.0.9"
   },
   "dependencies": {
     "lodash": "^4.17.15",
