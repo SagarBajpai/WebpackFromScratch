@@ -7,6 +7,9 @@ import createHeader from "./components/header";
 import createPosts from "./components/posts";
 import createUser from "./components/user";
 
+// DefinePlugin Demo:
+console.log("APP VERSION", VERSION);
+
 // Access body to be able to add html inside it:
 const body = document.querySelector("body");
 
