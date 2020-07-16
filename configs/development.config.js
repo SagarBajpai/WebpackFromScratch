@@ -2,8 +2,16 @@ const path = require("path");
 
 module.exports = () => ({
   output: {
-    filename: "bundle.js",
+    filename: "[id].[name].[hash].js",
     path: path.resolve(__dirname, "../dist"),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
   },
   devServer: {
     //https://webpack.js.org/configuration/dev-server/

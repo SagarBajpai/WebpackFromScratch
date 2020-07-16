@@ -18,10 +18,6 @@ module.exports = (webpackEnv) => {
       module: {
         rules: [
           {
-            test: /\.css$/,
-            use: ["style-loader", "css-loader"],
-          },
-          {
             test: /\.(png|jpg|jpeg|svg|gif)$/,
             use: {
               loader: "url-loader",
