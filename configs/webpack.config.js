@@ -10,9 +10,12 @@ module.exports = (webpackEnv) => {
   return merge(
     {
       mode,
-      entry: "./src/index.js",
+      entry: {
+        index: "./src/index.js",
+        about: "./src/about.js",
+      },
       output: {
-        filename: "bundle.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
       },
       module: {
@@ -53,7 +56,17 @@ module.exports = (webpackEnv) => {
       },
       plugins: [
         new htmlWebpackPlugin({
+          filename: "index.html",
+          chunks: "[index]",
           title: "Social Media Website",
+          meta: {
+            course: "Webpack From Scratch from sagar",
+          },
+        }),
+        new htmlWebpackPlugin({
+          filename: "about.html",
+          chunks: "[about]",
+          title: "About: Social Media Website",
           meta: {
             course: "Webpack From Scratch from sagar",
           },

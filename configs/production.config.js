@@ -7,7 +7,7 @@ const CompressWebpackPlugin = require("compression-webpack-plugin");
 module.exports = () => ({
   devtool: "source-map",
   output: {
-    filename: "bundle.[hash].js",
+    filename: "[id].[name].[hash].js",
     path: path.resolve(__dirname, "../dist"),
   },
   optimization: {
@@ -25,6 +25,12 @@ module.exports = () => ({
     new MiniCssExtractPlugin({
       filename: "[name].[hash].css",
       chunkFilename: "[id].[hash].css",
+    }), //https://webpack.js.org/plugins/mini-css-extract-plugin/#string
+
+    new CompressWebpackPlugin({
+      filename: "[path].gz",
+      test: /\.(js|css)$/,
+      algorithm: "gzip",
     }),
-  ], //https://webpack.js.org/plugins/mini-css-extract-plugin/#string
+  ],
 });
