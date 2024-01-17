@@ -1,15 +1,11 @@
-import _ from "lodash";
-import { joinByPipe, convertTo12hrClock } from "../helpers/index";
+import { joinByPipe, convertTo12hrClock } from "../helpers/index.js";
 
 // Data required for the function to render the DOM:
 const postsData = [
   ["Planning to finish the book by the year 2030", "22:00"],
   ['Just started "Javascript: The Definitive Guide"', "6:30"],
   ["I feel good today!", "Yesterday"],
-  [
-    "Binge-watching stuff thanks to the lockdown! Contagion is nice :)",
-    "Last week",
-  ],
+  ["Binge-watching stuff thanks to the lockdown! Contagion is nice :)", "Last week"],
 ];
 
 /**
@@ -28,14 +24,11 @@ const createPosts = () => {
   const arrayOfPosts = [];
   for (let post of postsData) {
     arrayOfPosts.push(
-      `<div class="post">${joinByPipe(
-        post[0],
-        convertTo12hrClock(post[1])
-      )}</div>`
+      `<div class="post">${joinByPipe(post[0], convertTo12hrClock(post[1]))}</div>`
     );
   }
   const collectPosts = document.createElement("div");
-  collectPosts.innerHTML = _.join(arrayOfPosts, "\n"); // Lodash use
+  collectPosts.innerHTML = arrayOfPosts.join("\n");
 
   // Append all child elements to parent:
   Posts.appendChild(postHeader);
