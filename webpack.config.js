@@ -1,10 +1,12 @@
 const path = require("path");
 
-module.exports = () => ({
-  mode: "production",
-  entry: "./src/index.js",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-  },
-});
+module.exports = (props) => {
+  return {
+    mode: props.mode,
+    entry: "./src/index.js",
+    output: {
+      filename: "bundle.js",
+      path: path.resolve(__dirname, "dist"),
+    },
+  };
+};
